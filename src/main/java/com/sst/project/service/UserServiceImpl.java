@@ -49,8 +49,8 @@ public class UserServiceImpl implements UserService {
 		try {
 			userRepository.save(User);
 		} catch (Exception ex) {
-//			System.err.println("Throwing User not Registerd exception from Service Class..." + ex);
-			throw new RuntimeException("User not Registerd." + ex.getLocalizedMessage());
+			System.err.println("Throwing User not Registerd exception from Service Class..." + ex);
+			throw new RuntimeException("User not Registerd.");
 		}
 		return userMapper.convertToDTO(User);
 	}
