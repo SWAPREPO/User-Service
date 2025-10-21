@@ -39,12 +39,12 @@ public class UserServiceImpl implements UserService {
 		User User = userMapper.convertToEntity(userDTO);
 		
 //		System.out.println("Object Converted to Role 	:: " + lsRole.toString());
-		System.out.println("Object Converted to Entity 	:: " + User.toString());
+//		System.out.println("Object Converted to Entity 	:: " + User.toString());
 		
 		User.setRole(lsRole);
 		User.setPassword(encryptDecryptUtils.generateSHA256Hash(userDTO.getFirstName().toLowerCase() + "@12345"));
 		
-		System.out.println("Object Converted to Entity After :: " + User.toString());
+//		System.out.println("Object Converted to Entity After :: " + User.toString());
 		
 		try {
 			userRepository.save(User);

@@ -13,6 +13,16 @@ target/
 .springBeans
 .sts4-cache
 
+### USER DEFINED ###
+*.class
+bin/.gitattributes
+bin/.gitignore
+bin/.project
+bin/mvnw
+bin/mvnw.cmd
+bin/pom.xml
+*maven-wrapper.properties
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

@@ -40,20 +40,20 @@ public class AppConfig {
 	
 	    modelMapper.addMappings(userMap);
 	    
-	    PropertyMap<UserDTO, User> dtoToEntityMap = new PropertyMap<UserDTO, User>() {
-            @Override
-            protected void configure() {
-            	map().setFirstName(source.getFirstName());
-            	map().setMiddleName(source.getMiddleName());
-            	map().setLastName(source.getLastName());
-            	map().setEmail(source.getEmail());
-            	map().setMobileNo(source.getMobileNo());
-            	map().setGender(source.getGender());
-            	
-            	map().setRole(new Role(source.getRoleId()));
-            }
-        };
-        modelMapper.addMappings(dtoToEntityMap);
+//	    PropertyMap<UserDTO, User> dtoToEntityMap = new PropertyMap<UserDTO, User>() {
+//            @Override
+//            protected void configure() {
+//            	map().setFirstName(source.getFirstName());
+//            	map().setMiddleName(source.getMiddleName());
+//            	map().setLastName(source.getLastName());
+//            	map().setEmail(source.getEmail());
+//            	map().setMobileNo(source.getMobileNo());
+//            	map().setGender(source.getGender());
+//            	
+//            	map().setRole(new Role(source.getRoleId()));
+//            }
+//        };
+//        modelMapper.addMappings(dtoToEntityMap);
 	    
 		return modelMapper;
     }
